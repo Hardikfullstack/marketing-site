@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --background-primary: #ffff;
+  --background-secondary: #f3f4f6;
+  --background-dark: #111827;
+  --input-background: #ffffff;
+  --input-text: #111827;
+  --input-border: #d1d5db;
+  --button-primary: #7c3aed;
+  --button-primary-hover: #6d28d9;
+  --button-secondary: #e5e7eb;
+  --button-secondary-hover: #d1d5db;
+  --button-default: #EBD7BB;
+  --border-color: #e5e7eb;
+  --card-background: #ffffff;
+  --card-color: #113527;
+  --background-footer: #113527;
+  --defalt-white: #fff;
+  --background-shadow-primary: #ffffff; 
+  --background-scor: #EBD7BB;
+}
+
+[data-theme='dark'] {
+  --background-scor: #3D3C30;
+  --background-shadow-primary: #1E2A25 ;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --background-primary: #0C1700;
+  --background-secondary: #1f2937;
+  --input-background: #1f2937;
+  --input-text: #f9fafb;
+  --input-border: #374151;
+  --button-primary: #7c3aed;
+  --button-primary-hover: #6d28d9;
+  --button-secondary: #374151;
+  --button-secondary-hover: #4b5563;
+  --border-color: #374151;
+  --card-background: #1f2937;
+  --card-color: #113527;
+  --button-default: #EBD7BB;
+  --background-footer: #113527;
+  --defalt-white: #fff; 
+}
+
+/* Base styles */
+.bg-white  {
+  background-color: var(--background-primary) !important;
+}
+
+/* Base styles */
+body {
+  color: var(--text-primary);
+}
+
+/* Form elements */
+input, textarea {
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  @apply rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-4 py-2 rounded-md font-medium;
+  background-color: var(--button-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-primary-hover);
+}
+
+.btn-secondary {
+  @apply px-4 py-2 rounded-md font-medium;
+  background-color: var(--button-secondary);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+/* Card styles */
+.card {
+  @apply rounded-lg p-4;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+}
+
+/* Transitions */
+* {
+  @apply transition-colors duration-200;
+} 
